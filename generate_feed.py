@@ -1,8 +1,12 @@
+# arg1 = dir name, arg 2 = outfile
+
 import sys
 import os
 import datetime
 from mutagen.mp3 import MP3
-audio_filename = sys.argv[1]
+dirname = sys.argv[1]
+os.chdir("C:/Users/jkeller/Documents/Pizza My Mind/" + dirname)
+audio_filename = dirname + ".mp3"
 audio = MP3(audio_filename)
 outfile = open(sys.argv[2], "a")
 
